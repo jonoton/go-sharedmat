@@ -249,7 +249,7 @@ func (s *SharedMat) cleanup() (filled bool, closed bool) {
 		closed = true
 	}
 	if s.refs < 0 {
-		log.Warnf(LogPrepend, "Negative Refs at %d\n", s.refs)
+		log.Warnf("%s Negative Refs at %d", LogPrepend, s.refs)
 	}
 	if s.refs >= 0 {
 		s.removeTracked()
